@@ -6,6 +6,20 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     // Add options here
+    minifyCSS: {
+      enabled: false
+    },
+    minifyJS: {
+      enabled: false
+    },
+    fingerprint: {
+      enabled: false,
+      prepend: 'http://www.example.com',
+      exclude: ['fonts/12424'],
+      ignore: ['fonts/12424'],
+      extension: ['r3', 'html'],
+      replaceExtensions: ['html', 'htm']
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
